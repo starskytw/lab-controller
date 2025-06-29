@@ -1,0 +1,9 @@
+---
+all:
+    hosts:
+        VM-WIN-NODE01:
+          ansible_hosts: 192.168.2.2
+    children:
+        gitlab-runner:
+            hosts:
+                WM-WIN-NODE01:
