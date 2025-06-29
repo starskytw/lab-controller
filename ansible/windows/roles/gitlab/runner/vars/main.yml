@@ -1,0 +1,2 @@
+win_directory: C:\ansible\gitlab-runner
+win_installer: "{{ win_directory }}\\gitlab-runner.exe"

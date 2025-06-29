@@ -1,0 +1,7 @@
+---
+- name: deploy gitlab runner to {{ cli_hosts }}
+  hosts: "{{ cli_hosts }}"
+  tasks:
+    - name: deploy gitlab-runner
+      import_role:
+        name: gitlab-runner
