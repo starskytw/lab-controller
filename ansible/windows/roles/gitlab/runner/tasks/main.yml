@@ -1,0 +1,11 @@
+---
+- name: make gitlab-runner directory
+  ansible.windwos.win_file:
+    name: "{{ win_directory }}"
+    state: directory
+  
+- name: install gitlab-runner
+  ansible.windows.win_powershell:
+    script: |
+      {{ win_installer }} install --user .\{{ ansible_user }} --password {{ ansible_ssh_pass }}
+      {{ win_installer }} start
